@@ -31,6 +31,31 @@ def test_build_feed_xml_contains_enclosure_and_script_link() -> None:
     assert "https://example.com/podcast/scripts/2026-05-25.md" in xml
 
 
+def test_build_feed_xml_adds_channel_artwork_when_image_path_is_provided() -> None:
+    xml = build_feed_xml(
+        site_url="https://example.com/podcast/",
+        program_title="Daily Finance Audio",
+        episodes=[duration_episode()],
+        image_path="cover.png",
+    )
+
+    root = ElementTree.fromstring(xml)
+    channel = root.find("channel")
+    assert channel is not None
+    image_url = "https://example.com/podcast/cover.png"
+    itunes_image = channel.find(
+        "{http://www.itunes.com/dtds/podcast-1.0.dtd}image"
+    )
+    standard_image = channel.find("image")
+
+    assert itunes_image is not None
+    assert itunes_image.attrib["href"] == image_url
+    assert standard_image is not None
+    assert standard_image.findtext("url") == image_url
+    assert standard_image.findtext("title") == "Daily Finance Audio"
+    assert standard_image.findtext("link") == "https://example.com/podcast/"
+
+
 def test_build_feed_xml_preserves_site_subpath_for_root_relative_episode_paths() -> None:
     episode = duration_episode()
     episode["audio_path"] = "/audio/2026-05-25.mp3"

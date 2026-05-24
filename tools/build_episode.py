@@ -47,7 +47,12 @@ def load_existing_metadata(metadata_dir: Path) -> list[dict[str, Any]]:
     return episodes
 
 
-def write_index(site_url: str, episodes: list[dict[str, Any]], target: Path) -> None:
+def write_index(
+    site_url: str,
+    episodes: list[dict[str, Any]],
+    target: Path,
+    cover_image_path: str | None = None,
+) -> None:
     rows = []
     for episode in episodes:
         audio_path = html.escape(str(episode["audio_path"]), quote=True)
@@ -60,6 +65,12 @@ def write_index(site_url: str, episodes: list[dict[str, Any]], target: Path) -> 
         )
 
     feed_url = html.escape(f"{site_url.rstrip('/')}/feed.xml", quote=True)
+    cover_rows = []
+    if cover_image_path:
+        cover_src = html.escape(cover_image_path, quote=True)
+        cover_rows.append(
+            f'<p><img src="{cover_src}" alt="Daily Finance Audio cover"></p>'
+        )
     html_text = "\n".join(
         [
             "<!doctype html>",
@@ -67,6 +78,7 @@ def write_index(site_url: str, episodes: list[dict[str, Any]], target: Path) -> 
             '<head><meta charset="utf-8"><title>Daily Finance Audio</title></head>',
             "<body>",
             "<h1>Daily Finance Audio</h1>",
+            *cover_rows,
             f'<p><a href="{feed_url}">Podcast RSS Feed</a></p>',
             "<ol>",
             *rows,
@@ -176,6 +188,8 @@ def main() -> int:
     metadata_path = docs_dir / "metadata" / f"{args.date}.json"
     feed_path = docs_dir / "feed.xml"
     index_path = docs_dir / "index.html"
+    cover_path = docs_dir / "cover.png"
+    cover_image_path = "cover.png" if cover_path.exists() else None
     report_path = docs_dir / "reports" / f"{args.date}-delivery_report.json"
 
     for directory in (
@@ -243,7 +257,12 @@ def main() -> int:
 
             try:
                 episodes = collect_episodes_with_metadata(docs_dir / "metadata", metadata)
-                feed_xml = build_feed_xml(args.site_url, PROGRAM_TITLE, episodes)
+                feed_xml = build_feed_xml(
+                    args.site_url,
+                    PROGRAM_TITLE,
+                    episodes,
+                    image_path=cover_image_path,
+                )
             except Exception as error:
                 raise BuildStageError("feed_generation", error) from error
 
@@ -260,7 +279,12 @@ def main() -> int:
                 raise BuildStageError("staged_file_write", error) from error
 
             try:
-                write_index(args.site_url, episodes, staged_index)
+                write_index(
+                    args.site_url,
+                    episodes,
+                    staged_index,
+                    cover_image_path=cover_image_path,
+                )
             except Exception as error:
                 raise BuildStageError("index_generation", error) from error
 

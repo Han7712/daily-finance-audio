@@ -14,16 +14,29 @@ HONG_KONG_TZ = timezone(timedelta(hours=8))
 ElementTree.register_namespace("itunes", ITUNES_NAMESPACE)
 
 
-def build_feed_xml(site_url: str, program_title: str, episodes: list[dict]) -> str:
+def build_feed_xml(
+    site_url: str,
+    program_title: str,
+    episodes: list[dict],
+    image_path: str | None = None,
+) -> str:
     rss = ElementTree.Element("rss", {"version": "2.0"})
     channel = ElementTree.SubElement(rss, "channel")
+    channel_link = _absolute_url(site_url, "")
 
     _add_text(channel, "title", program_title)
     _add_text(channel, "language", "zh-cn")
-    _add_text(channel, "link", _absolute_url(site_url, ""))
+    _add_text(channel, "link", channel_link)
     _add_text(channel, "description", f"{program_title} podcast feed")
     _add_text(channel, _itunes_tag("author"), "Han")
     _add_text(channel, _itunes_tag("explicit"), "false")
+    if image_path:
+        image_url = _absolute_url(site_url, image_path)
+        ElementTree.SubElement(channel, _itunes_tag("image"), {"href": image_url})
+        image = ElementTree.SubElement(channel, "image")
+        _add_text(image, "url", image_url)
+        _add_text(image, "title", program_title)
+        _add_text(image, "link", channel_link)
     _add_text(channel, "lastBuildDate", format_datetime(datetime.now(timezone.utc)))
 
     for episode in sorted(episodes, key=_episode_date, reverse=True):

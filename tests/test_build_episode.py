@@ -105,6 +105,27 @@ def test_write_index_links_feed_audio_and_script(tmp_path: Path) -> None:
     assert 'href="scripts/2026-05-25.md"' in html
 
 
+def test_write_index_renders_cover_when_cover_path_is_provided(tmp_path: Path) -> None:
+    target = tmp_path / "index.html"
+
+    write_index(
+        "https://han.github.io/daily-finance-audio",
+        [
+            {
+                "date": "2026-05-25",
+                "title": "Duration",
+                "audio_path": "audio/2026-05-25.mp3",
+                "script_path": "scripts/2026-05-25.md",
+            }
+        ],
+        target,
+        cover_image_path="cover.png",
+    )
+
+    html = target.read_text(encoding="utf-8")
+    assert '<img src="cover.png" alt="Daily Finance Audio cover">' in html
+
+
 def test_style_violation_writes_failure_report_and_leaves_feed_unchanged(
     tmp_path: Path, monkeypatch
 ) -> None:
@@ -233,6 +254,31 @@ def test_successful_main_flow_with_mocked_tts_and_afinfo(
     assert (tmp_path / "docs" / "metadata" / "2026-05-25.json").exists()
     assert (tmp_path / "docs" / "feed.xml").exists()
     assert (tmp_path / "docs" / "index.html").exists()
+
+
+def test_successful_main_flow_uses_existing_cover_in_feed_and_index(
+    tmp_path: Path, monkeypatch
+) -> None:
+    script_path = valid_script(tmp_path)
+    configure_cli(monkeypatch, tmp_path, script_path)
+    cover_path = tmp_path / "docs" / "cover.png"
+    cover_path.parent.mkdir(parents=True)
+    cover_path.write_bytes(b"cover")
+
+    def fake_tts(_text: str, output_path: Path, **_kwargs) -> None:
+        output_path.write_bytes(b"audio bytes")
+
+    monkeypatch.setattr("tools.build_episode.save_edge_tts", fake_tts)
+    monkeypatch.setattr("tools.build_episode.read_duration_seconds", lambda _path: 42)
+
+    exit_code = main()
+
+    feed_xml = (tmp_path / "docs" / "feed.xml").read_text(encoding="utf-8")
+    index_html = (tmp_path / "docs" / "index.html").read_text(encoding="utf-8")
+    assert exit_code == 0
+    assert 'href="https://Han7712.github.io/daily-finance-audio/cover.png"' in feed_xml
+    assert "<url>https://Han7712.github.io/daily-finance-audio/cover.png</url>" in feed_xml
+    assert '<img src="cover.png" alt="Daily Finance Audio cover">' in index_html
 
 
 def test_publish_failure_restores_all_existing_outputs(
