@@ -1,7 +1,49 @@
 import json
 from pathlib import Path
 
-from tools.build_episode import load_existing_metadata, main, write_index
+import pytest
+
+from tools.build_episode import (
+    load_existing_metadata,
+    main,
+    parse_afinfo_duration_seconds,
+    write_index,
+)
+
+
+def valid_script(tmp_path: Path) -> Path:
+    script_path = tmp_path / "script.md"
+    script_path.write_text(
+        "# Duration\n\n"
+        "今天的问题是，利率变化时，债券价格为什么会有不同反应。\n\n"
+        "Duration 衡量债券价格对利率变化的敏感程度。等待现金流的时间越长，价格通常越敏感。\n",
+        encoding="utf-8",
+    )
+    return script_path
+
+
+def configure_cli(monkeypatch, tmp_path: Path, script_path: Path) -> None:
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(
+        "sys.argv",
+        [
+            "build_episode.py",
+            "--date",
+            "2026-05-25",
+            "--slug",
+            "duration",
+            "--title",
+            "Duration",
+            "--summary",
+            "A practical explanation of duration.",
+            "--keywords",
+            "duration,fixed income,bonds",
+            "--script",
+            str(script_path),
+            "--voice",
+            "zh-CN-YunjianNeural",
+        ],
+    )
 
 
 def test_load_existing_metadata_reads_sorted_json_files(tmp_path: Path) -> None:
@@ -19,6 +61,26 @@ def test_load_existing_metadata_reads_sorted_json_files(tmp_path: Path) -> None:
     episodes = load_existing_metadata(metadata_dir)
 
     assert [episode["date"] for episode in episodes] == ["2026-05-25", "2026-05-26"]
+
+
+def test_parse_afinfo_duration_seconds_reads_representative_output() -> None:
+    output = """
+File:           docs/audio/2026-05-25.mp3
+estimated duration: 68.784000 sec
+audio bytes: 412704
+"""
+
+    assert parse_afinfo_duration_seconds(output) == 68
+
+
+def test_parse_afinfo_duration_seconds_raises_when_duration_is_missing() -> None:
+    output = """
+File:           docs/audio/2026-05-25.mp3
+audio bytes: 412704
+"""
+
+    with pytest.raises(ValueError, match="estimated duration"):
+        parse_afinfo_duration_seconds(output)
 
 
 def test_write_index_links_feed_audio_and_script(tmp_path: Path) -> None:
@@ -84,3 +146,90 @@ def test_style_violation_writes_failure_report_and_leaves_feed_unchanged(
     assert report["ok"] is False
     assert report["violations"] == ["dash_break"]
     assert feed_path.read_text(encoding="utf-8") == "<rss>unchanged</rss>"
+
+
+def test_tts_failure_writes_report_and_keeps_existing_feed(
+    tmp_path: Path, monkeypatch
+) -> None:
+    script_path = valid_script(tmp_path)
+    feed_path = tmp_path / "docs" / "feed.xml"
+    feed_path.parent.mkdir()
+    feed_path.write_text("<rss>existing feed</rss>", encoding="utf-8")
+    configure_cli(monkeypatch, tmp_path, script_path)
+
+    def fail_tts(*_args, **_kwargs) -> None:
+        raise RuntimeError("tts unavailable")
+
+    monkeypatch.setattr("tools.build_episode.save_edge_tts", fail_tts)
+
+    exit_code = main()
+
+    report = json.loads(
+        (tmp_path / "docs" / "reports" / "2026-05-25-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 1
+    assert report["ok"] is False
+    assert report["stage"] == "tts"
+    assert report["error_type"] == "RuntimeError"
+    assert report["preserve_existing"] is True
+    assert feed_path.read_text(encoding="utf-8") == "<rss>existing feed</rss>"
+
+
+def test_afinfo_failure_does_not_replace_existing_audio(
+    tmp_path: Path, monkeypatch
+) -> None:
+    script_path = valid_script(tmp_path)
+    audio_path = tmp_path / "docs" / "audio" / "2026-05-25.mp3"
+    audio_path.parent.mkdir(parents=True)
+    audio_path.write_bytes(b"existing audio")
+    configure_cli(monkeypatch, tmp_path, script_path)
+
+    def fake_tts(_text: str, output_path: Path, **_kwargs) -> None:
+        output_path.write_bytes(b"new staged audio")
+
+    monkeypatch.setattr("tools.build_episode.save_edge_tts", fake_tts)
+    monkeypatch.setattr(
+        "tools.build_episode.read_duration_seconds",
+        lambda _path: (_ for _ in ()).throw(ValueError("estimated duration missing")),
+    )
+
+    exit_code = main()
+
+    report = json.loads(
+        (tmp_path / "docs" / "reports" / "2026-05-25-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 1
+    assert report["ok"] is False
+    assert report["stage"] == "afinfo"
+    assert audio_path.read_bytes() == b"existing audio"
+
+
+def test_successful_main_flow_with_mocked_tts_and_afinfo(
+    tmp_path: Path, monkeypatch
+) -> None:
+    script_path = valid_script(tmp_path)
+    configure_cli(monkeypatch, tmp_path, script_path)
+
+    def fake_tts(_text: str, output_path: Path, **_kwargs) -> None:
+        output_path.write_bytes(b"audio bytes")
+
+    monkeypatch.setattr("tools.build_episode.save_edge_tts", fake_tts)
+    monkeypatch.setattr("tools.build_episode.read_duration_seconds", lambda _path: 42)
+
+    exit_code = main()
+
+    report = json.loads(
+        (tmp_path / "docs" / "reports" / "2026-05-25-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 0
+    assert report["ok"] is True
+    assert (tmp_path / "docs" / "audio" / "2026-05-25.mp3").read_bytes() == b"audio bytes"
+    assert (tmp_path / "docs" / "metadata" / "2026-05-25.json").exists()
+    assert (tmp_path / "docs" / "feed.xml").exists()
+    assert (tmp_path / "docs" / "index.html").exists()
