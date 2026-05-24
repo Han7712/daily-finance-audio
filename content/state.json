@@ -2,5 +2,7 @@
   "last_episode_date": null,
   "last_slug": null,
   "last_review_question": null,
-  "used_slugs": []
+  "used_slugs": [],
+  "selected_voice": "zh-CN-YunjianNeural",
+  "selected_rate": "-5%"
 }
