@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -95,14 +96,47 @@ def failure_report(date: str, stage: str, error: BaseException) -> dict[str, Any
         "stage": stage,
         "error_type": type(error).__name__,
         "message": str(error),
-        "preserve_existing": True,
+        "preserve_existing": getattr(error, "rollback_succeeded", True),
     }
 
 
 def publish_staged_files(staged_outputs: list[tuple[Path, Path]]) -> None:
-    for staged_path, final_path in staged_outputs:
-        final_path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.move(str(staged_path), str(final_path))
+    common_root = staged_outputs[0][1].parents[1]
+    with tempfile.TemporaryDirectory(
+        prefix="episode-publish-backup-",
+        dir=common_root,
+    ) as backup_dir_name:
+        backup_dir = Path(backup_dir_name)
+        backups: list[tuple[Path, Path | None]] = []
+
+        try:
+            for index, (_staged_path, final_path) in enumerate(staged_outputs):
+                final_path.parent.mkdir(parents=True, exist_ok=True)
+                backup_path = None
+                if final_path.exists():
+                    backup_path = backup_dir / f"{index}.bak"
+                    shutil.copy2(final_path, backup_path)
+                backups.append((final_path, backup_path))
+
+            for staged_path, final_path in staged_outputs:
+                os.replace(staged_path, final_path)
+        except Exception as error:
+            rollback_succeeded = restore_backups(backups)
+            raise PublishError(error, rollback_succeeded) from error
+
+
+def restore_backups(backups: list[tuple[Path, Path | None]]) -> bool:
+    rollback_succeeded = True
+    for final_path, backup_path in reversed(backups):
+        try:
+            if backup_path is None:
+                if final_path.exists():
+                    final_path.unlink()
+            else:
+                os.replace(backup_path, final_path)
+        except Exception:
+            rollback_succeeded = False
+    return rollback_succeeded
 
 
 def collect_episodes_with_metadata(
@@ -268,6 +302,12 @@ class BuildStageError(Exception):
         super().__init__(str(cause))
         self.stage = stage
         self.cause = cause
+
+
+class PublishError(Exception):
+    def __init__(self, cause: BaseException, rollback_succeeded: bool) -> None:
+        super().__init__(str(cause))
+        self.rollback_succeeded = rollback_succeeded
 
 
 if __name__ == "__main__":

@@ -233,3 +233,65 @@ def test_successful_main_flow_with_mocked_tts_and_afinfo(
     assert (tmp_path / "docs" / "metadata" / "2026-05-25.json").exists()
     assert (tmp_path / "docs" / "feed.xml").exists()
     assert (tmp_path / "docs" / "index.html").exists()
+
+
+def test_publish_failure_restores_all_existing_outputs(
+    tmp_path: Path, monkeypatch
+) -> None:
+    script_path = valid_script(tmp_path)
+    configure_cli(monkeypatch, tmp_path, script_path)
+    docs_dir = tmp_path / "docs"
+    original_files = {
+        docs_dir / "audio" / "2026-05-25.mp3": b"old audio",
+        docs_dir / "scripts" / "2026-05-25.md": b"old script",
+        docs_dir / "metadata" / "2026-05-25.json": json.dumps(
+            {
+                "date": "2026-05-25",
+                "slug": "duration",
+                "title": "Old Duration",
+                "summary": "Old summary.",
+                "keywords": ["duration"],
+                "audio_path": "audio/2026-05-25.mp3",
+                "script_path": "scripts/2026-05-25.md",
+                "voice": "zh-CN-YunjianNeural",
+                "duration_seconds": 30,
+                "file_size_bytes": 9,
+            }
+        ).encode(),
+        docs_dir / "feed.xml": b"old feed",
+        docs_dir / "index.html": b"old index",
+    }
+    for path, content in original_files.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+
+    def fake_tts(_text: str, output_path: Path, **_kwargs) -> None:
+        output_path.write_bytes(b"new audio")
+
+    replace_calls = 0
+    original_replace = __import__("os").replace
+
+    def fail_after_first_replace(source: str, destination: str) -> str:
+        nonlocal replace_calls
+        replace_calls += 1
+        if replace_calls == 2:
+            raise OSError("publish failed")
+        return original_replace(source, destination)
+
+    monkeypatch.setattr("tools.build_episode.save_edge_tts", fake_tts)
+    monkeypatch.setattr("tools.build_episode.read_duration_seconds", lambda _path: 42)
+    monkeypatch.setattr("tools.build_episode.os.replace", fail_after_first_replace)
+
+    exit_code = main()
+
+    report = json.loads(
+        (docs_dir / "reports" / "2026-05-25-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 1
+    assert report["ok"] is False
+    assert report["stage"] == "publish"
+    assert report["preserve_existing"] is True
+    for path, content in original_files.items():
+        assert path.read_bytes() == content
