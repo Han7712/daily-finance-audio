@@ -31,6 +31,24 @@ def test_build_feed_xml_contains_enclosure_and_script_link() -> None:
     assert "https://example.com/podcast/scripts/2026-05-25.md" in xml
 
 
+def test_build_feed_xml_preserves_site_subpath_for_root_relative_episode_paths() -> None:
+    episode = duration_episode()
+    episode["audio_path"] = "/audio/2026-05-25.mp3"
+    episode["script_path"] = "/scripts/2026-05-25.md"
+
+    xml = build_feed_xml(
+        site_url="https://example.com/daily-finance-audio/",
+        program_title="Daily Finance Audio",
+        episodes=[episode],
+    )
+
+    assert (
+        'url="https://example.com/daily-finance-audio/audio/2026-05-25.mp3"'
+        in xml
+    )
+    assert "https://example.com/daily-finance-audio/scripts/2026-05-25.md" in xml
+
+
 def test_build_feed_xml_parses_and_sorts_newest_episode_first() -> None:
     older = duration_episode()
     older["date"] = "2026-05-24"

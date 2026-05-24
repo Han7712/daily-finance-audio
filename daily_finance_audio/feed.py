@@ -69,7 +69,7 @@ def _add_text(
 
 def _absolute_url(site_url: str, path: str) -> str:
     base = site_url.rstrip("/") + "/"
-    return urljoin(base, path)
+    return urljoin(base, path.lstrip("/"))
 
 
 def _episode_date(episode: dict[str, Any]) -> date:
