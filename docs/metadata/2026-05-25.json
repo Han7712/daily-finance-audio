@@ -1,16 +1,18 @@
 {
   "date": "2026-05-25",
-  "slug": "duration",
-  "title": "Duration",
-  "summary": "A practical explanation of duration.",
+  "slug": "term-premium",
+  "title": "Term Premium",
+  "summary": "期限溢价如何影响长端利率、收益率曲线和资产估值。",
   "keywords": [
-    "duration",
-    "fixed income",
-    "bonds"
+    "term premium",
+    "yield curve",
+    "rates",
+    "treasury",
+    "valuation"
   ],
   "audio_path": "audio/2026-05-25.mp3",
   "script_path": "scripts/2026-05-25.md",
   "voice": "zh-CN-YunjianNeural",
-  "duration_seconds": 68,
-  "file_size_bytes": 412704
+  "duration_seconds": 254,
+  "file_size_bytes": 1528416
 }

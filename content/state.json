@@ -1,8 +1,10 @@
 {
-  "last_episode_date": null,
-  "last_slug": null,
-  "last_review_question": null,
-  "used_slugs": [],
+  "last_episode_date": "2026-05-25",
+  "last_slug": "term-premium",
+  "last_review_question": "如果十年期收益率上行五十个基点，怎样判断这次上行主要来自政策利率预期，还是来自 term premium 上升？",
+  "used_slugs": [
+    "term-premium"
+  ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
 }
