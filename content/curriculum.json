@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "rotation": [
+    {"slug": "yield-curve", "title": "Yield Curve", "domain": "rates"},
+    {"slug": "duration", "title": "Duration", "domain": "fixed_income"},
+    {"slug": "convexity", "title": "Convexity", "domain": "fixed_income"},
+    {"slug": "term-premium", "title": "Term Premium", "domain": "macro_rates"},
+    {"slug": "credit-spread", "title": "Credit Spread", "domain": "credit"},
+    {"slug": "equity-risk-premium", "title": "Equity Risk Premium", "domain": "equity"},
+    {"slug": "wacc", "title": "WACC", "domain": "corporate_finance"},
+    {"slug": "beta", "title": "Beta", "domain": "asset_pricing"},
+    {"slug": "volatility", "title": "Volatility", "domain": "derivatives"},
+    {"slug": "carry", "title": "Carry", "domain": "fx_rates"},
+    {"slug": "liquidity-premium", "title": "Liquidity Premium", "domain": "market_structure"},
+    {"slug": "var", "title": "Value at Risk", "domain": "risk_management"}
+  ]
+}
