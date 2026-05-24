@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "date": "2026-05-25",
+  "audio_path": "/Users/han/Code/daily-finance-audio/docs/audio/2026-05-25.mp3",
+  "script_path": "/Users/han/Code/daily-finance-audio/docs/scripts/2026-05-25.md",
+  "metadata_path": "/Users/han/Code/daily-finance-audio/docs/metadata/2026-05-25.json",
+  "feed_path": "/Users/han/Code/daily-finance-audio/docs/feed.xml",
+  "index_path": "/Users/han/Code/daily-finance-audio/docs/index.html",
+  "duration_seconds": 68,
+  "file_size_bytes": 412704,
+  "voice": "zh-CN-YunjianNeural",
+  "site_url": "https://han.github.io/daily-finance-audio"
+}

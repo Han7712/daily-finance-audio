@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-25",
+  "slug": "duration",
+  "title": "Duration",
+  "summary": "A practical explanation of duration.",
+  "keywords": [
+    "duration",
+    "fixed income",
+    "bonds"
+  ],
+  "audio_path": "audio/2026-05-25.mp3",
+  "script_path": "scripts/2026-05-25.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 68,
+  "file_size_bytes": 412704
+}
