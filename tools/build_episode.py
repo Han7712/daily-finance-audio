@@ -18,7 +18,7 @@ from daily_finance_audio.tts import save_edge_tts
 from daily_finance_audio.validation import detect_style_violations, validate_metadata
 
 PROGRAM_TITLE = "Daily Finance Audio"
-DEFAULT_SITE_URL = "https://han.github.io/daily-finance-audio"
+DEFAULT_SITE_URL = "https://Han7712.github.io/daily-finance-audio"
 RETENTION_LIMIT = 90
 DURATION_RE = re.compile(r"estimated duration:\s*([0-9]+(?:\.[0-9]+)?)\s*sec")
 
