@@ -1,0 +1,17 @@
+[project]
+name = "daily-finance-audio"
+version = "0.1.0"
+description = "Daily finance education audio podcast generator"
+requires-python = ">=3.11"
+dependencies = [
+  "edge-tts>=7.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
