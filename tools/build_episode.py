@@ -183,8 +183,9 @@ def main() -> int:
 
     repo_root = Path.cwd()
     docs_dir = repo_root / "docs"
-    audio_path = docs_dir / "audio" / f"{args.date}.mp3"
-    script_target = docs_dir / "scripts" / f"{args.date}.md"
+    asset_stem = f"{args.date}-{args.slug}"
+    audio_path = docs_dir / "audio" / f"{asset_stem}.mp3"
+    script_target = docs_dir / "scripts" / f"{asset_stem}.md"
     metadata_path = docs_dir / "metadata" / f"{args.date}.json"
     feed_path = docs_dir / "feed.xml"
     index_path = docs_dir / "index.html"
@@ -217,8 +218,8 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="episode-build-", dir=docs_dir) as tmp_dir_name:
         tmp_dir = Path(tmp_dir_name)
-        staged_audio = tmp_dir / "audio" / f"{args.date}.mp3"
-        staged_script = tmp_dir / "scripts" / f"{args.date}.md"
+        staged_audio = tmp_dir / "audio" / f"{asset_stem}.mp3"
+        staged_script = tmp_dir / "scripts" / f"{asset_stem}.md"
         staged_metadata = tmp_dir / "metadata" / f"{args.date}.json"
         staged_feed = tmp_dir / "feed.xml"
         staged_index = tmp_dir / "index.html"
@@ -243,8 +244,8 @@ def main() -> int:
                 "keywords": [
                     item.strip() for item in args.keywords.split(",") if item.strip()
                 ],
-                "audio_path": f"audio/{args.date}.mp3",
-                "script_path": f"scripts/{args.date}.md",
+                "audio_path": f"audio/{asset_stem}.mp3",
+                "script_path": f"scripts/{asset_stem}.md",
                 "voice": args.voice,
                 "duration_seconds": duration_seconds,
                 "file_size_bytes": staged_audio.stat().st_size,

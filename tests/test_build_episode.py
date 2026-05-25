@@ -248,9 +248,20 @@ def test_successful_main_flow_with_mocked_tts_and_afinfo(
             encoding="utf-8"
         )
     )
+    metadata = json.loads(
+        (tmp_path / "docs" / "metadata" / "2026-05-25.json").read_text(
+            encoding="utf-8"
+        )
+    )
     assert exit_code == 0
     assert report["ok"] is True
-    assert (tmp_path / "docs" / "audio" / "2026-05-25.mp3").read_bytes() == b"audio bytes"
+    assert report["audio_path"].endswith("/docs/audio/2026-05-25-duration.mp3")
+    assert report["script_path"].endswith("/docs/scripts/2026-05-25-duration.md")
+    assert metadata["audio_path"] == "audio/2026-05-25-duration.mp3"
+    assert metadata["script_path"] == "scripts/2026-05-25-duration.md"
+    assert (
+        tmp_path / "docs" / "audio" / "2026-05-25-duration.mp3"
+    ).read_bytes() == b"audio bytes"
     assert (tmp_path / "docs" / "metadata" / "2026-05-25.json").exists()
     assert (tmp_path / "docs" / "feed.xml").exists()
     assert (tmp_path / "docs" / "index.html").exists()
