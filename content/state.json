@@ -1,9 +1,10 @@
 {
-  "last_episode_date": "2026-05-25",
-  "last_slug": "term-premium",
-  "last_review_question": "如果十年期收益率上行五十个基点，怎样判断这次上行主要来自政策利率预期，还是来自 term premium 上升？",
+  "last_episode_date": "2026-05-26",
+  "last_slug": "credit-spread",
+  "last_review_question": "当一家公司的信用利差扩大一百个基点时，你会用哪三类证据判断这是基本面恶化，流动性冲击，还是市场风险偏好下降？",
   "used_slugs": [
-    "term-premium"
+    "term-premium",
+    "credit-spread"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

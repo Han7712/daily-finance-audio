@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-26",
+  "slug": "credit-spread",
+  "title": "Credit Spread",
+  "summary": "信用利差如何把违约风险、流动性和风险偏好转化为债券估值信号。",
+  "keywords": [
+    "credit spread",
+    "credit",
+    "bonds",
+    "default risk",
+    "investment grade",
+    "high yield"
+  ],
+  "audio_path": "audio/2026-05-26-credit-spread.mp3",
+  "script_path": "scripts/2026-05-26-credit-spread.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 265,
+  "file_size_bytes": 1592352
+}
