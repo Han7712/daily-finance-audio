@@ -1,10 +1,11 @@
 {
-  "last_episode_date": "2026-05-26",
-  "last_slug": "credit-spread",
-  "last_review_question": "当一家公司的信用利差扩大一百个基点时，你会用哪三类证据判断这是基本面恶化，流动性冲击，还是市场风险偏好下降？",
+  "last_episode_date": "2026-05-27",
+  "last_slug": "equity-risk-premium",
+  "last_review_question": "如果股市上涨同时十年期国债收益率上行，你会用哪些证据判断上涨来自盈利预期改善，还是 equity risk premium 压缩？",
   "used_slugs": [
     "term-premium",
-    "credit-spread"
+    "credit-spread",
+    "equity-risk-premium"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

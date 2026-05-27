@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-27",
+  "slug": "equity-risk-premium",
+  "title": "Equity Risk Premium",
+  "summary": "股权风险溢价如何连接盈利预期、无风险利率与股票估值安全边际。",
+  "keywords": [
+    "equity risk premium",
+    "ERP",
+    "valuation",
+    "equities",
+    "discount rate",
+    "DCF"
+  ],
+  "audio_path": "audio/2026-05-27-equity-risk-premium.mp3",
+  "script_path": "scripts/2026-05-27-equity-risk-premium.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 268,
+  "file_size_bytes": 1610352
+}
