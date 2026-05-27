@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-28",
+  "slug": "volatility-risk-premium",
+  "title": "Volatility Risk Premium",
+  "summary": "波动率风险溢价如何连接期权保险需求、隐含波动率与实际波动率差额。",
+  "keywords": [
+    "volatility risk premium",
+    "VRP",
+    "implied volatility",
+    "realized volatility",
+    "options",
+    "VIX"
+  ],
+  "audio_path": "audio/2026-05-28-volatility-risk-premium.mp3",
+  "script_path": "scripts/2026-05-28-volatility-risk-premium.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 265,
+  "file_size_bytes": 1594512
+}
