@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-29",
+  "slug": "carry-and-roll-down",
+  "title": "Carry and Roll Down",
+  "summary": "持有收益与曲线下滑收益如何影响债券组合的预期回报和压力情景。",
+  "keywords": [
+    "carry",
+    "roll-down",
+    "fixed income",
+    "yield curve",
+    "duration",
+    "spread carry"
+  ],
+  "audio_path": "audio/2026-05-29-carry-and-roll-down.mp3",
+  "script_path": "scripts/2026-05-29-carry-and-roll-down.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 287,
+  "file_size_bytes": 1727136
+}

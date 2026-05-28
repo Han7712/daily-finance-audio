@@ -1,12 +1,13 @@
 {
-  "last_episode_date": "2026-05-28",
-  "last_slug": "volatility-risk-premium",
-  "last_review_question": "当 implied volatility 明显高于 realized volatility 时，你会检查哪些证据，来判断这是合理的尾部风险补偿，还是过度拥挤的卖波动率交易？",
+  "last_episode_date": "2026-05-29",
+  "last_slug": "carry-and-roll-down",
+  "last_review_question": "当一只债券的 carry and roll-down 很高时，你会用哪些压力情景检查这份预期回报是否真的有安全边际？",
   "used_slugs": [
     "term-premium",
     "credit-spread",
     "equity-risk-premium",
-    "volatility-risk-premium"
+    "volatility-risk-premium",
+    "carry-and-roll-down"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
