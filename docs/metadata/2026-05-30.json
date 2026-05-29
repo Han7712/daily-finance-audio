@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-30",
+  "slug": "breakeven-inflation",
+  "title": "Breakeven Inflation",
+  "summary": "盈亏平衡通胀如何连接名义利率、实际利率和通胀预期，用于判断债券和宏观定价。",
+  "keywords": [
+    "breakeven inflation",
+    "TIPS",
+    "real yield",
+    "nominal yield",
+    "inflation expectations",
+    "rates"
+  ],
+  "audio_path": "audio/2026-05-30-breakeven-inflation.mp3",
+  "script_path": "scripts/2026-05-30-breakeven-inflation.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 288,
+  "file_size_bytes": 1732176
+}
