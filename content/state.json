@@ -1,14 +1,15 @@
 {
-  "last_episode_date": "2026-05-30",
-  "last_slug": "breakeven-inflation",
-  "last_review_question": "当十年期 breakeven inflation 明显上升时，你会检查哪些证据，来区分通胀预期上修、通胀风险溢价上升和 TIPS 技术性供需变化？",
+  "last_episode_date": "2026-05-31",
+  "last_slug": "forward-rate",
+  "last_review_question": "当一条 forward curve 整体下移，但长期 forward rate 几乎不动时，你会怎样区分短期降息预期、增长风险和期限溢价变化？",
   "used_slugs": [
     "term-premium",
     "credit-spread",
     "equity-risk-premium",
     "volatility-risk-premium",
     "carry-and-roll-down",
-    "breakeven-inflation"
+    "breakeven-inflation",
+    "forward-rate"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

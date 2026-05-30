@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "date": "2026-05-31",
+  "audio_path": "/Users/han/Code/daily-finance-audio/docs/audio/2026-05-31-forward-rate.mp3",
+  "script_path": "/Users/han/Code/daily-finance-audio/docs/scripts/2026-05-31-forward-rate.md",
+  "metadata_path": "/Users/han/Code/daily-finance-audio/docs/metadata/2026-05-31.json",
+  "feed_path": "/Users/han/Code/daily-finance-audio/docs/feed.xml",
+  "index_path": "/Users/han/Code/daily-finance-audio/docs/index.html",
+  "duration_seconds": 287,
+  "file_size_bytes": 1723968,
+  "voice": "zh-CN-YunjianNeural",
+  "site_url": "https://Han7712.github.io/daily-finance-audio"
+}

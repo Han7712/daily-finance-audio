@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-31",
+  "slug": "forward-rate",
+  "title": "Forward Rate",
+  "summary": "远期利率如何从收益率曲线推导未来期间融资价格，并帮助判断政策预期、期限溢价和估值折现率。",
+  "keywords": [
+    "forward rate",
+    "spot rate",
+    "yield curve",
+    "discount factor",
+    "OIS",
+    "term premium",
+    "rates"
+  ],
+  "audio_path": "audio/2026-05-31-forward-rate.mp3",
+  "script_path": "scripts/2026-05-31-forward-rate.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 287,
+  "file_size_bytes": 1723968
+}
