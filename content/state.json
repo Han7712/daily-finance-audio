@@ -1,7 +1,7 @@
 {
-  "last_episode_date": "2026-05-31",
-  "last_slug": "forward-rate",
-  "last_review_question": "当一条 forward curve 整体下移，但长期 forward rate 几乎不动时，你会怎样区分短期降息预期、增长风险和期限溢价变化？",
+  "last_episode_date": "2026-06-01",
+  "last_slug": "real-yield",
+  "last_review_question": "当 real yield 上升但 breakeven inflation 下降时，你会怎样判断这是增长预期改善、货币政策收紧，还是风险偏好变差？",
   "used_slugs": [
     "term-premium",
     "credit-spread",
@@ -9,7 +9,8 @@
     "volatility-risk-premium",
     "carry-and-roll-down",
     "breakeven-inflation",
-    "forward-rate"
+    "forward-rate",
+    "real-yield"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

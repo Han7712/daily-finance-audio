@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-01",
+  "slug": "real-yield",
+  "title": "Real Yield",
+  "summary": "实际收益率如何拆解名义利率、通胀补偿和真实折现率，并解释股票估值、黄金、房地产和长期债券的定价压力。",
+  "keywords": [
+    "real yield",
+    "TIPS",
+    "breakeven inflation",
+    "nominal yield",
+    "discount rate",
+    "DCF",
+    "macro rates"
+  ],
+  "audio_path": "audio/2026-06-01-real-yield.mp3",
+  "script_path": "scripts/2026-06-01-real-yield.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 289,
+  "file_size_bytes": 1739952
+}
