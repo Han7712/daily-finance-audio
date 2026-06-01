@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-02",
+  "slug": "liquidity-premium",
+  "title": "Liquidity Premium",
+  "summary": "流动性溢价如何补偿资产难以快速低成本成交的风险，并帮助区分高收益机会和流动性陷阱。",
+  "keywords": [
+    "liquidity premium",
+    "bid-ask spread",
+    "market depth",
+    "price impact",
+    "credit bonds",
+    "private credit",
+    "market structure"
+  ],
+  "audio_path": "audio/2026-06-02-liquidity-premium.mp3",
+  "script_path": "scripts/2026-06-02-liquidity-premium.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 269,
+  "file_size_bytes": 1618272
+}
