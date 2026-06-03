@@ -1,7 +1,7 @@
 {
-  "last_episode_date": "2026-06-02",
-  "last_slug": "liquidity-premium",
-  "last_review_question": "如果同一发行人两只债券基本面相近，但成交更活跃的一只收益率更低，你会怎样拆分信用风险、供需因素和 liquidity premium？",
+  "last_episode_date": "2026-06-04",
+  "last_slug": "var",
+  "last_review_question": "如果一个组合的一日 99% VaR 是一千万，你会怎样向 PM 解释这个数字没有覆盖的尾部损失、模型假设和压力情景？",
   "used_slugs": [
     "term-premium",
     "credit-spread",
@@ -11,7 +11,8 @@
     "breakeven-inflation",
     "forward-rate",
     "real-yield",
-    "liquidity-premium"
+    "liquidity-premium",
+    "var"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

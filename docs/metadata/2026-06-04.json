@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-04",
+  "slug": "var",
+  "title": "Value at Risk",
+  "summary": "用置信水平、持有期和分布假设理解 VaR 如何度量组合在正常市场中的潜在损失。",
+  "keywords": [
+    "VaR",
+    "Value at Risk",
+    "risk management",
+    "tail risk",
+    "portfolio risk"
+  ],
+  "audio_path": "audio/2026-06-04-var.mp3",
+  "script_path": "scripts/2026-06-04-var.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 295,
+  "file_size_bytes": 1773072
+}
