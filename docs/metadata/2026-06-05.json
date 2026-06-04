@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-05",
+  "slug": "swap-spread",
+  "title": "Swap Spread",
+  "summary": "解释 swap spread 如何连接互换固定利率、国债收益率、银行信用、国债供给和资产负债表约束。",
+  "keywords": [
+    "swap spread",
+    "interest rate swap",
+    "Treasury yield",
+    "funding risk",
+    "balance sheet"
+  ],
+  "audio_path": "audio/2026-06-05-swap-spread.mp3",
+  "script_path": "scripts/2026-06-05-swap-spread.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 293,
+  "file_size_bytes": 1758528
+}

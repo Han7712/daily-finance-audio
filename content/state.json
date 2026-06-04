@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-04",
-  "last_slug": "var",
-  "last_review_question": "如果一个组合的一日 99% VaR 是一千万，你会怎样向 PM 解释这个数字没有覆盖的尾部损失、模型假设和压力情景？",
+  "last_episode_date": "2026-06-05",
+  "last_slug": "swap-spread",
+  "last_review_question": "当十年期 swap spread 从正值转为负值时，你会怎样拆分国债供给、互换对冲需求、银行信用和资产负债表约束？",
   "used_slugs": [
-    "term-premium",
     "credit-spread",
     "equity-risk-premium",
     "volatility-risk-premium",
@@ -12,7 +11,8 @@
     "forward-rate",
     "real-yield",
     "liquidity-premium",
-    "var"
+    "var",
+    "swap-spread"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
