@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-06",
+  "slug": "sofr-ois",
+  "title": "SOFR OIS",
+  "summary": "解释 SOFR OIS 如何连接隔夜担保融资、政策利率预期、衍生品折现和国债曲线相对价值。",
+  "keywords": [
+    "SOFR",
+    "OIS",
+    "SOFR OIS",
+    "OIS discounting",
+    "policy rate",
+    "collateralized derivatives",
+    "Treasury yield"
+  ],
+  "audio_path": "audio/2026-06-06-sofr-ois.mp3",
+  "script_path": "scripts/2026-06-06-sofr-ois.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 304,
+  "file_size_bytes": 1824912
+}

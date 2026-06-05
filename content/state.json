@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-05",
-  "last_slug": "swap-spread",
-  "last_review_question": "当十年期 swap spread 从正值转为负值时，你会怎样拆分国债供给、互换对冲需求、银行信用和资产负债表约束？",
+  "last_episode_date": "2026-06-06",
+  "last_slug": "sofr-ois",
+  "last_review_question": "当两年期 SOFR OIS 明显下移，但同期限国债收益率几乎不变时，你会怎样拆分政策利率预期、期限溢价、国债供需和抵押品因素？",
   "used_slugs": [
-    "credit-spread",
     "equity-risk-premium",
     "volatility-risk-premium",
     "carry-and-roll-down",
@@ -12,7 +11,8 @@
     "real-yield",
     "liquidity-premium",
     "var",
-    "swap-spread"
+    "swap-spread",
+    "sofr-ois"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
