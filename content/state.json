@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-06",
-  "last_slug": "sofr-ois",
-  "last_review_question": "当两年期 SOFR OIS 明显下移，但同期限国债收益率几乎不变时，你会怎样拆分政策利率预期、期限溢价、国债供需和抵押品因素？",
+  "last_episode_date": "2026-06-07",
+  "last_slug": "repo-market-mechanics",
+  "last_review_question": "如果 general collateral repo rate 在国债交割日突然上行，你会怎样判断这是现金紧张、抵押品供给冲击，还是 dealer balance sheet capacity 的约束？",
   "used_slugs": [
-    "equity-risk-premium",
     "volatility-risk-premium",
     "carry-and-roll-down",
     "breakeven-inflation",
@@ -12,7 +11,8 @@
     "liquidity-premium",
     "var",
     "swap-spread",
-    "sofr-ois"
+    "sofr-ois",
+    "repo-market-mechanics"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

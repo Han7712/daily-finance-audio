@@ -1,0 +1,19 @@
+{
+  "date": "2026-06-07",
+  "slug": "repo-market-mechanics",
+  "title": "Repo Market Mechanics",
+  "summary": "回购市场如何连接现金、抵押品和交易商资产负债表容量。",
+  "keywords": [
+    "repo",
+    "repo rate",
+    "collateral",
+    "haircut",
+    "dealer balance sheet",
+    "SOFR"
+  ],
+  "audio_path": "audio/2026-06-07-repo-market-mechanics.mp3",
+  "script_path": "scripts/2026-06-07-repo-market-mechanics.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 301,
+  "file_size_bytes": 1806768
+}
