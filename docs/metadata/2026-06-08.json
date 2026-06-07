@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-08",
+  "slug": "treasury-auction-tail",
+  "title": "Treasury Auction Tail",
+  "summary": "解释国债拍卖 tail 如何连接发行需求、拍卖前 concession、一级交易商库存和后续融资压力。",
+  "keywords": [
+    "Treasury auction",
+    "auction tail",
+    "when-issued yield",
+    "concession",
+    "bid-to-cover",
+    "indirect bidder",
+    "primary dealer",
+    "repo"
+  ],
+  "audio_path": "audio/2026-06-08-treasury-auction-tail.mp3",
+  "script_path": "scripts/2026-06-08-treasury-auction-tail.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 315,
+  "file_size_bytes": 1893600
+}
