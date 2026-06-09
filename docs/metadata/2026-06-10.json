@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-10",
+  "slug": "cross-currency-basis",
+  "title": "Cross Currency Basis",
+  "summary": "解释 cross currency basis 如何把美元融资压力、外汇远期、跨币种掉期和对冲后收益连接起来。",
+  "keywords": [
+    "cross currency basis",
+    "CIP",
+    "FX forward",
+    "cross currency swap",
+    "EUR USD basis",
+    "dollar funding",
+    "hedged yield"
+  ],
+  "audio_path": "audio/2026-06-10-cross-currency-basis.mp3",
+  "script_path": "scripts/2026-06-10-cross-currency-basis.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 301,
+  "file_size_bytes": 1806768
+}
