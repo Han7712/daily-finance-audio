@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-11",
+  "slug": "dollar-smile",
+  "title": "Dollar Smile",
+  "summary": "解释 Dollar Smile 如何把美元避险需求、美国增长优势、实际收益率和全球风险偏好连接起来。",
+  "keywords": [
+    "Dollar Smile",
+    "DXY",
+    "safe haven",
+    "real yield",
+    "risk appetite",
+    "funding stress",
+    "FX"
+  ],
+  "audio_path": "audio/2026-06-11-dollar-smile.mp3",
+  "script_path": "scripts/2026-06-11-dollar-smile.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 291,
+  "file_size_bytes": 1747584
+}

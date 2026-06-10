@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-10",
-  "last_slug": "cross-currency-basis",
-  "last_review_question": "如果 EUR USD basis 突然更负，同时美元 OIS 没有明显上行，你会怎样判断这是美元融资需求上升、银行中介资产负债表收缩，还是海外投资者对冲美元资产的成本变化？",
+  "last_episode_date": "2026-06-11",
+  "last_slug": "dollar-smile",
+  "last_review_question": "如果美元上涨，同时美股也上涨、信用利差没有明显走阔、美国实际收益率上行，你会把它放在 Dollar Smile 的哪一段？还需要看哪些数据来确认？",
   "used_slugs": [
-    "breakeven-inflation",
     "forward-rate",
     "real-yield",
     "liquidity-premium",
@@ -12,7 +11,8 @@
     "sofr-ois",
     "repo-market-mechanics",
     "treasury-auction-tail",
-    "cross-currency-basis"
+    "cross-currency-basis",
+    "dollar-smile"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
