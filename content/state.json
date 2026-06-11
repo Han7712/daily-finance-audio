@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-11",
-  "last_slug": "dollar-smile",
-  "last_review_question": "如果美元上涨，同时美股也上涨、信用利差没有明显走阔、美国实际收益率上行，你会把它放在 Dollar Smile 的哪一段？还需要看哪些数据来确认？",
+  "last_episode_date": "2026-06-12",
+  "last_slug": "fx-carry-crash",
+  "last_review_question": "如果一个高息货币过去三个月波动率很低、利差很高，但 VIX 上升、美元融资指标变紧、基金持仓也偏拥挤，你会继续加仓 carry trade，还是先降仓位？你会看哪些指标来确认？",
   "used_slugs": [
-    "forward-rate",
     "real-yield",
     "liquidity-premium",
     "var",
@@ -12,7 +11,8 @@
     "repo-market-mechanics",
     "treasury-auction-tail",
     "cross-currency-basis",
-    "dollar-smile"
+    "dollar-smile",
+    "fx-carry-crash"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

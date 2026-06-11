@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-12",
+  "slug": "fx-carry-crash",
+  "title": "FX Carry Crash",
+  "summary": "解释 FX Carry Crash 如何把外汇利差交易、融资货币、仓位拥挤、波动率和高息货币回撤连接起来。",
+  "keywords": [
+    "FX Carry Crash",
+    "FX carry trade",
+    "carry",
+    "JPY funding",
+    "high yield currency",
+    "volatility",
+    "positioning",
+    "stop loss"
+  ],
+  "audio_path": "audio/2026-06-12-fx-carry-crash.mp3",
+  "script_path": "scripts/2026-06-12-fx-carry-crash.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 281,
+  "file_size_bytes": 1687392
+}
