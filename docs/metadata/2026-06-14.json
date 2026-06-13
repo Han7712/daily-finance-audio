@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-14",
+  "slug": "credit-curve",
+  "title": "Credit Curve",
+  "summary": "解释 Credit Curve 如何把信用利差、期限结构、违约时间分布、流动性和再融资风险连接起来。",
+  "keywords": [
+    "Credit Curve",
+    "credit spread",
+    "credit curve",
+    "corporate bonds",
+    "refinancing risk",
+    "term structure",
+    "high yield",
+    "investment grade"
+  ],
+  "audio_path": "audio/2026-06-14-credit-curve.mp3",
+  "script_path": "scripts/2026-06-14-credit-curve.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 282,
+  "file_size_bytes": 1697328
+}

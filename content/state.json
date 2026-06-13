@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-12",
-  "last_slug": "fx-carry-crash",
-  "last_review_question": "如果一个高息货币过去三个月波动率很低、利差很高，但 VIX 上升、美元融资指标变紧、基金持仓也偏拥挤，你会继续加仓 carry trade，还是先降仓位？你会看哪些指标来确认？",
+  "last_episode_date": "2026-06-14",
+  "last_slug": "credit-curve",
+  "last_review_question": "如果一家 BB 发行人的短端信用利差快速走宽，同时评级机构把展望调成负面，你会如何区分这是 credit curve 对再融资风险的重新定价，还是 rating migration 已经开始被市场提前交易？",
   "used_slugs": [
-    "real-yield",
     "liquidity-premium",
     "var",
     "swap-spread",
@@ -12,7 +11,8 @@
     "treasury-auction-tail",
     "cross-currency-basis",
     "dollar-smile",
-    "fx-carry-crash"
+    "fx-carry-crash",
+    "credit-curve"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
