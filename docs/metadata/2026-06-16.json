@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-16",
+  "slug": "rating-migration",
+  "title": "Rating Migration",
+  "summary": "评级迁徙如何在正式降级前影响信用利差、持有人结构和再融资路径。",
+  "keywords": [
+    "rating migration",
+    "credit rating",
+    "downgrade",
+    "fallen angel",
+    "credit spread"
+  ],
+  "audio_path": "audio/2026-06-16-rating-migration.mp3",
+  "script_path": "scripts/2026-06-16-rating-migration.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 315,
+  "file_size_bytes": 1893168
+}

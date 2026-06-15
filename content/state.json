@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-14",
-  "last_slug": "credit-curve",
-  "last_review_question": "如果一家 BB 发行人的短端信用利差快速走宽，同时评级机构把展望调成负面，你会如何区分这是 credit curve 对再融资风险的重新定价，还是 rating migration 已经开始被市场提前交易？",
+  "last_episode_date": "2026-06-16",
+  "last_slug": "rating-migration",
+  "last_review_question": "如果一只债券已被市场按 BB 定价，但正式评级仍是 BBB，你会怎样判断它的利差里还剩多少 fallen angel 风险？",
   "used_slugs": [
-    "liquidity-premium",
     "var",
     "swap-spread",
     "sofr-ois",
@@ -12,7 +11,8 @@
     "cross-currency-basis",
     "dollar-smile",
     "fx-carry-crash",
-    "credit-curve"
+    "credit-curve",
+    "rating-migration"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
