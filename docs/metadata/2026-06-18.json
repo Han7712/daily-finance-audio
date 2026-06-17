@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-18",
+  "slug": "etf-creation-redemption",
+  "title": "ETF Creation Redemption",
+  "summary": "解释 ETF 申购赎回、AP 套利、折溢价与底层资产流动性之间的关系。",
+  "keywords": [
+    "ETF",
+    "creation",
+    "redemption",
+    "authorized participant",
+    "NAV",
+    "premium",
+    "discount",
+    "arbitrage",
+    "liquidity"
+  ],
+  "audio_path": "audio/2026-06-18-etf-creation-redemption.mp3",
+  "script_path": "scripts/2026-06-18-etf-creation-redemption.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 333,
+  "file_size_bytes": 1998432
+}

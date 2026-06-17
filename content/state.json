@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-16",
-  "last_slug": "rating-migration",
-  "last_review_question": "如果一只债券已被市场按 BB 定价，但正式评级仍是 BBB，你会怎样判断它的利差里还剩多少 fallen angel 风险？",
+  "last_episode_date": "2026-06-18",
+  "last_slug": "etf-creation-redemption",
+  "last_review_question": "当债券 ETF 出现百分之二折价时，你会怎样判断这是便宜的 ETF，还是底层债券 NAV 被高估了？",
   "used_slugs": [
-    "var",
     "swap-spread",
     "sofr-ois",
     "repo-market-mechanics",
@@ -12,7 +11,8 @@
     "dollar-smile",
     "fx-carry-crash",
     "credit-curve",
-    "rating-migration"
+    "rating-migration",
+    "etf-creation-redemption"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
