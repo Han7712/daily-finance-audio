@@ -1,0 +1,19 @@
+{
+  "date": "2026-06-19",
+  "slug": "dealer-balance-sheet-capacity",
+  "title": "Dealer Balance Sheet Capacity",
+  "summary": "交易商资产负债表承载能力如何影响做市、买卖价差、库存风险和市场流动性。",
+  "keywords": [
+    "dealer balance sheet",
+    "market liquidity",
+    "bid ask spread",
+    "inventory risk",
+    "repo",
+    "VaR"
+  ],
+  "audio_path": "audio/2026-06-19-dealer-balance-sheet-capacity.mp3",
+  "script_path": "scripts/2026-06-19-dealer-balance-sheet-capacity.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 310,
+  "file_size_bytes": 1865232
+}
