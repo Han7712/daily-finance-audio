@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-19",
-  "last_slug": "dealer-balance-sheet-capacity",
-  "last_review_question": "如果一级交易商仓位已经很重，同时国债拍卖即将到来，你会怎样判断二级市场收益率上行里，哪一部分来自期限溢价，哪一部分来自资产负债表容量约束？",
+  "last_episode_date": "2026-06-20",
+  "last_slug": "primary-dealer-positioning",
+  "last_review_question": "如果一级交易商在七到十年期国债上净多，同时未来一周供给很重，你会怎样判断收益率上行来自利率预期变化、期限溢价变化，还是仓位消化需要更多 concession？",
   "used_slugs": [
-    "sofr-ois",
     "repo-market-mechanics",
     "treasury-auction-tail",
     "cross-currency-basis",
@@ -12,7 +11,8 @@
     "credit-curve",
     "rating-migration",
     "etf-creation-redemption",
-    "dealer-balance-sheet-capacity"
+    "dealer-balance-sheet-capacity",
+    "primary-dealer-positioning"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

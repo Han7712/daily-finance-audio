@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "date": "2026-06-20",
+  "audio_path": "/Users/han/Desktop/Morning Info/projects/daily-finance-audio/docs/audio/2026-06-20-primary-dealer-positioning.mp3",
+  "script_path": "/Users/han/Desktop/Morning Info/projects/daily-finance-audio/docs/scripts/2026-06-20-primary-dealer-positioning.md",
+  "metadata_path": "/Users/han/Desktop/Morning Info/projects/daily-finance-audio/docs/metadata/2026-06-20.json",
+  "feed_path": "/Users/han/Desktop/Morning Info/projects/daily-finance-audio/docs/feed.xml",
+  "index_path": "/Users/han/Desktop/Morning Info/projects/daily-finance-audio/docs/index.html",
+  "duration_seconds": 295,
+  "file_size_bytes": 1772352,
+  "voice": "zh-CN-YunjianNeural",
+  "site_url": "https://Han7712.github.io/daily-finance-audio"
+}

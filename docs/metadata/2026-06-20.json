@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-20",
+  "slug": "primary-dealer-positioning",
+  "title": "Primary Dealer Positioning",
+  "summary": "一级交易商仓位如何影响国债拍卖、收益率曲线、融资成本和市场流动性。",
+  "keywords": [
+    "primary dealer",
+    "positioning",
+    "Treasury auction",
+    "concession",
+    "repo",
+    "futures basis",
+    "rates"
+  ],
+  "audio_path": "audio/2026-06-20-primary-dealer-positioning.mp3",
+  "script_path": "scripts/2026-06-20-primary-dealer-positioning.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 295,
+  "file_size_bytes": 1772352
+}
