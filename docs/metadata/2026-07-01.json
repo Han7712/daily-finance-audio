@@ -1,0 +1,20 @@
+{
+  "date": "2026-07-01",
+  "slug": "mortgage-negative-convexity",
+  "title": "Mortgage Negative Convexity",
+  "summary": "按揭资产负凸性如何通过提前还款、久期变化和对冲流放大利率波动。",
+  "keywords": [
+    "MBS",
+    "mortgage negative convexity",
+    "prepayment option",
+    "duration extension",
+    "convexity hedging",
+    "swap",
+    "rates"
+  ],
+  "audio_path": "audio/2026-07-01-mortgage-negative-convexity.mp3",
+  "script_path": "scripts/2026-07-01-mortgage-negative-convexity.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 310,
+  "file_size_bytes": 1864368
+}

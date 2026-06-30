@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-06-20",
-  "last_slug": "primary-dealer-positioning",
-  "last_review_question": "如果一级交易商在七到十年期国债上净多，同时未来一周供给很重，你会怎样判断收益率上行来自利率预期变化、期限溢价变化，还是仓位消化需要更多 concession？",
+  "last_episode_date": "2026-07-01",
+  "last_slug": "mortgage-negative-convexity",
+  "last_review_question": "如果十年期收益率快速上行，同时 MBS duration 明显延长，你会怎样区分这轮 selloff 里，哪一部分来自宏观预期变化，哪一部分来自 mortgage convexity hedging？",
   "used_slugs": [
-    "repo-market-mechanics",
     "treasury-auction-tail",
     "cross-currency-basis",
     "dollar-smile",
@@ -12,7 +11,8 @@
     "rating-migration",
     "etf-creation-redemption",
     "dealer-balance-sheet-capacity",
-    "primary-dealer-positioning"
+    "primary-dealer-positioning",
+    "mortgage-negative-convexity"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
