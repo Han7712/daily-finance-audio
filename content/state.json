@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-07-02",
-  "last_slug": "gamma-squeeze",
-  "last_review_question": "如果一只股票的短期期权成交量突然放大，股价接近最大未平仓看涨期权行权价，你会怎样判断后续走势更可能来自基本面重估、空头回补，还是 dealer delta hedging？",
+  "last_episode_date": "2026-07-03",
+  "last_slug": "skew-and-smile",
+  "last_review_question": "如果隐含波动率曲线突然左偏更陡，但指数现货还在上涨，你会怎样判断这是尾部保护需求、做市商库存压力，还是基本面风险已经提前进入期权价格？",
   "used_slugs": [
-    "cross-currency-basis",
     "dollar-smile",
     "fx-carry-crash",
     "credit-curve",
@@ -12,7 +11,8 @@
     "dealer-balance-sheet-capacity",
     "primary-dealer-positioning",
     "mortgage-negative-convexity",
-    "gamma-squeeze"
+    "gamma-squeeze",
+    "skew-and-smile"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

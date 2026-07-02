@@ -1,0 +1,20 @@
+{
+  "date": "2026-07-03",
+  "slug": "skew-and-smile",
+  "title": "Skew and Smile",
+  "summary": "波动率偏斜和微笑如何把期权价格拆成尾部风险、保护需求、做市商库存和行权价结构的定价。",
+  "keywords": [
+    "Skew and Smile",
+    "implied volatility",
+    "volatility skew",
+    "volatility smile",
+    "put skew",
+    "vega",
+    "options"
+  ],
+  "audio_path": "audio/2026-07-03-skew-and-smile.mp3",
+  "script_path": "scripts/2026-07-03-skew-and-smile.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 314,
+  "file_size_bytes": 1887552
+}

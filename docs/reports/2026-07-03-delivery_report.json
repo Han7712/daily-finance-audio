@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "date": "2026-07-03",
+  "audio_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/audio/2026-07-03-skew-and-smile.mp3",
+  "script_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/scripts/2026-07-03-skew-and-smile.md",
+  "metadata_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/metadata/2026-07-03.json",
+  "feed_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/feed.xml",
+  "index_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/index.html",
+  "duration_seconds": 314,
+  "file_size_bytes": 1887552,
+  "voice": "zh-CN-YunjianNeural",
+  "site_url": "https://Han7712.github.io/daily-finance-audio"
+}
