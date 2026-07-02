@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "date": "2026-07-02",
+  "audio_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/audio/2026-07-02-gamma-squeeze.mp3",
+  "script_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/scripts/2026-07-02-gamma-squeeze.md",
+  "metadata_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/metadata/2026-07-02.json",
+  "feed_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/feed.xml",
+  "index_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/daily-finance-audio/docs/index.html",
+  "duration_seconds": 330,
+  "file_size_bytes": 1980000,
+  "voice": "zh-CN-YunjianNeural",
+  "site_url": "https://Han7712.github.io/daily-finance-audio"
+}

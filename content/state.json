@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-07-01",
-  "last_slug": "mortgage-negative-convexity",
-  "last_review_question": "如果十年期收益率快速上行，同时 MBS duration 明显延长，你会怎样区分这轮 selloff 里，哪一部分来自宏观预期变化，哪一部分来自 mortgage convexity hedging？",
+  "last_episode_date": "2026-07-02",
+  "last_slug": "gamma-squeeze",
+  "last_review_question": "如果一只股票的短期期权成交量突然放大，股价接近最大未平仓看涨期权行权价，你会怎样判断后续走势更可能来自基本面重估、空头回补，还是 dealer delta hedging？",
   "used_slugs": [
-    "treasury-auction-tail",
     "cross-currency-basis",
     "dollar-smile",
     "fx-carry-crash",
@@ -12,7 +11,8 @@
     "etf-creation-redemption",
     "dealer-balance-sheet-capacity",
     "primary-dealer-positioning",
-    "mortgage-negative-convexity"
+    "mortgage-negative-convexity",
+    "gamma-squeeze"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"

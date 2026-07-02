@@ -1,0 +1,20 @@
+{
+  "date": "2026-07-02",
+  "slug": "gamma-squeeze",
+  "title": "Gamma Squeeze",
+  "summary": "伽马挤压如何通过期权 delta 对冲、做市商仓位和现货流动性放大短期股价波动。",
+  "keywords": [
+    "Gamma Squeeze",
+    "gamma",
+    "delta",
+    "call option",
+    "dealer hedging",
+    "options",
+    "equity"
+  ],
+  "audio_path": "audio/2026-07-02-gamma-squeeze.mp3",
+  "script_path": "scripts/2026-07-02-gamma-squeeze.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 330,
+  "file_size_bytes": 1980000
+}
