@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-06",
+  "slug": "vanna-and-charm",
+  "title": "Vanna and Charm",
+  "summary": "用 Vanna 和 Charm 拆解期权 Delta 如何随波动率和时间变化，并理解做市商对冲流对盘面的影响。",
+  "keywords": [
+    "Vanna",
+    "Charm",
+    "Delta hedge",
+    "options",
+    "market microstructure"
+  ],
+  "audio_path": "audio/2026-07-06-vanna-and-charm.mp3",
+  "script_path": "scripts/2026-07-06-vanna-and-charm.md",
+  "voice": "zh-CN-YunjianNeural",
+  "duration_seconds": 292,
+  "file_size_bytes": 1756656
+}

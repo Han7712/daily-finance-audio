@@ -1,9 +1,8 @@
 {
-  "last_episode_date": "2026-07-03",
-  "last_slug": "skew-and-smile",
-  "last_review_question": "如果隐含波动率曲线突然左偏更陡，但指数现货还在上涨，你会怎样判断这是尾部保护需求、做市商库存压力，还是基本面风险已经提前进入期权价格？",
+  "last_episode_date": "2026-07-06",
+  "last_slug": "vanna-and-charm",
+  "last_review_question": "如果一只股票在财报后隐含波动率大幅下跌、现货小幅上涨，同时短期期权成交集中在价外看涨，你会如何拆分 Vanna、Charm 和 Gamma 对后续对冲流的影响？",
   "used_slugs": [
-    "dollar-smile",
     "fx-carry-crash",
     "credit-curve",
     "rating-migration",
@@ -12,7 +11,8 @@
     "primary-dealer-positioning",
     "mortgage-negative-convexity",
     "gamma-squeeze",
-    "skew-and-smile"
+    "skew-and-smile",
+    "vanna-and-charm"
   ],
   "selected_voice": "zh-CN-YunjianNeural",
   "selected_rate": "-5%"
